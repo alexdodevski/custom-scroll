@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll_block {
+  height: 500px;
+  width: 400px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.text_item {
+  margin: 5px;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+
+.text_item:last-child {
+  margin-bottom: 0;
+}
