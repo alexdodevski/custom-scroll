@@ -18,6 +18,16 @@
   border: 1px solid #ccc;
   padding: 10px;
   overflow: hidden;
+  position: relative;
+}
+
+.block_content {
+  overflow-y: scroll;
+  position: absolute;
+  left: 0;
+  right: -17px;
+  top: 0;
+  height: 100%;
 }
 
 .text_item {
@@ -28,4 +38,30 @@
 
 .text_item:last-child {
   margin-bottom: 0;
+}
+
+.scrollbar,
+.scroller {
+  width: 7px;
+  position: absolute;
+  top: 0;
+}
+
+.scrollbar {
+  right: 0;
+  bottom: 0;
+  height: 500px;
+}
+
+.scroller {
+  left: 0;
+  border-radius: 10px;
+  background: #b9b9b9;
+  cursor: pointer;
+  height: 10%;
+}
+
+.scroller:hover,
+.scroller:active {
+  background: #8b8b8b;
 }
