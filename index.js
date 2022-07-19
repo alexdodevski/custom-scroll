@@ -1,12 +1,16 @@
 "use strict";
 const scroll = document.querySelector(".scroller");
 const block = document.querySelector(".scroll_block");
-const blockContent = document.querySelector(".block_content");
+const blockContent = document.querySelector(".content_block");
+const textBlock = document.querySelector(".text_block");
+
+scroll.style.height = (textBlock.offsetHeight / 100) * 10 + "px";
 
 scroll.addEventListener("mousedown", function (e) {
   scroll.ondragstart = function () {
     return false;
   };
+
   let shiftY = e.clientY - scroll.getBoundingClientRect().top;
 
   scroll.style.zIndex = "1000";
@@ -27,6 +31,7 @@ scroll.addEventListener("mousedown", function (e) {
       top = blockContent.clientHeight - scroll.offsetHeight;
     }
     scroll.style.top = top + "px";
+    blockContent.scrollBy(0, 20.59);
   }
 
   function onMouseMove(e) {
@@ -43,5 +48,5 @@ scroll.addEventListener("mousedown", function (e) {
 });
 
 blockContent.addEventListener("scroll", function (e) {
-  console.log(e);
+  console.log(blockContent.scrollTop);
 });
